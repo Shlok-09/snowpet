@@ -46,7 +46,7 @@ def run_query(query):
 cur = conn.cursor()
 
 for index, row in df_ent.iterrows():
-     cur.execute("INSERT INTO ADANIENT (Date,Open,High,Low,Close,Adj_Close,Volume) values(?,?,?,?,?,?,?)", row.Dates, row.Open, row.High, row.Low, row.Close, row.Adj_Close, row.Volume)
+     cur.execute("INSERT INTO ADANIENT (Open,High,Low,Close,Adj_Close,Volume) values(?,?,?,?,?,?)", row.Open, row.High, row.Low, row.Close, row.Adj_Close, row.Volume)
 conn.commit()
 cur.close()
 
