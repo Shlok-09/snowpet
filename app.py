@@ -22,6 +22,7 @@ df_ent = yf.download('ADANIENT.NS', start, end)
 # df_gas = yf.download("ATGL.NS", start, end)
 
 df_ent.rename(columns = {'Adj Close':'Adj_Close'}, inplace = True)
+df_ent['Date'] = df_ent.index
 
 # Initialize connection.
 # Uses st.cache_resource to only run once.
